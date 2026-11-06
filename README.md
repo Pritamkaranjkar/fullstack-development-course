@@ -57,3 +57,4 @@ git checkout module-3-start      # jump to the start of Module 3
 - Module template: [resources/module-template.md](resources/module-template.md)
 - Capstone plan: [capstone-project/README.md](capstone-project/README.md)
 - Keep `solutions/` on the `solutions` branch if you do not want students to see them early.
+# fullstack-development-course
