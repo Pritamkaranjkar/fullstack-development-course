@@ -1,194 +1,120 @@
-# Module 1: Introduction to Full Stack Development, Internet, Client-Server, Dev Environment
+# Module 1: Introduction to Full Stack Development
 
-**Duration:** 2 hours  |  **Prerequisites:** Completed [00-setup](../00-setup/README.md)
+You are here: Module 1 > [Landing page](README.md)
 
-## Learning Objectives
-By the end of this module, students can:
-- Explain what a full stack developer does and the stages of the SDLC
-- Distinguish frontend from backend
-- Describe how a browser and a server communicate using HTTP/HTTPS
-- Trace a request-response cycle
-- Set up and use VS Code, Node.js, npm and Git
-- Read a typical project structure
+Previous: [00-setup](../00-setup/README.md)  |  Next: [Module 2](../module-02-html-css-js/README.md)
 
----
+**Duration:** 2 hours  |  **Prerequisites:** [00-setup](../00-setup/README.md)  |  **Focus:** full stack basics, internet, HTTP, client-server, dev environment
 
-## 1. What is Full Stack Development? (15 min)
+## Overview
 
-A **full stack developer** works on every layer of a web application:
+This module introduces the foundation of web development. You will learn what a full stack app is, how browsers and servers talk to each other, and how a basic project is set up.
 
-| Layer | What it does | Examples in this course |
-|-------|--------------|-------------------------|
-| Frontend | What the user sees and clicks | HTML, CSS, JavaScript, React, Vue |
-| Backend | Logic, rules, talking to the database | Node.js, Express, GraphQL |
-| Database | Stores data permanently | MongoDB, PostgreSQL |
-| DevOps | Builds, ships and runs the app | Git, Docker, Kubernetes |
+You do not need to know React or Express yet. You only need a working browser, terminal, and a willingness to learn the ideas behind the tools.
 
-**Analogy:** a restaurant. The dining room is the frontend, the kitchen is the backend, the pantry is the database, and the delivery of ingredients and opening of the restaurant is DevOps.
+## Learning objectives
 
-### SDLC (Software Development Life Cycle)
-1. **Plan:** what are we building and why?
-2. **Design:** screens, data, APIs
-3. **Develop:** write code
-4. **Test:** does it work?
-5. **Deploy:** put it online
-6. **Maintain:** fix bugs, add features
+By the end of this module, you should be able to:
 
-We will touch every stage using the capstone Task Manager.
+- explain the difference between frontend, backend, database, and DevOps
+- describe the internet, DNS, IP addresses, URLs, HTTP, and HTTPS
+- explain the client-server request-response cycle
+- use DevTools to inspect network traffic
+- install and verify VS Code, Node.js, npm, and Git
+- recognise a simple project structure and use basic Git commands
 
-### Frontend vs Backend
+## Lesson map
 
-| | Frontend | Backend |
+| Lesson | Time | Topic | Link |
+|---|---:|---|---|
+| 1 | 15 min | What is full stack? | [01-what-is-full-stack](lessons/01-what-is-full-stack.md) |
+| 2 | 20 min | Internet and HTTP | [02-internet-and-http](lessons/02-internet-and-http.md) |
+| 3 | 20 min | Client-server request response | [03-client-server-request-response](lessons/03-client-server-request-response.md) |
+| 4 | 20 min | Dev environment | [04-dev-environment](lessons/04-dev-environment.md) |
+| 5 | 15 min | Project structure and Git first steps | [05-project-structure-and-git-first-steps](lessons/05-project-structure-and-git-first-steps.md) |
+
+## Example map
+
+| Example | What it shows | Link |
 |---|---|---|
-| Runs on | User's browser | Server |
-| Languages | HTML, CSS, JavaScript | JavaScript (Node.js) in this course |
-| Concerns | Look, feel, interaction | Data, security, business rules |
-| User can see the code? | Yes | No |
+| 1 | A minimal HTTP server with routes and status codes | [01-hello-http-server](examples/01-hello-http-server/README.md) |
+| 2 | Browser + server together with CORS and `fetch()` | [02-client-server-demo](examples/02-client-server-demo/README.md) |
+| 3 | A raw HTTP request to a public API | [03-inspect-raw-http](examples/03-inspect-raw-http/README.md) |
+| 4 | `npm` scripts, `package.json`, and `node_modules` basics | [04-npm-basics](examples/04-npm-basics/README.md) |
 
----
+## Progress checklist
 
-## 2. The Internet and HTTP/HTTPS (25 min)
+### Lessons
 
-- The **internet** is a global network of connected computers.
-- Every server has an **IP address**. **DNS** translates names (`google.com`) into IP addresses.
-- **HTTP** (HyperText Transfer Protocol) is the set of rules browsers and servers use to talk.
-- **HTTPS** is HTTP plus encryption (TLS), so data cannot be read or altered in transit. Always use HTTPS in production.
+- [ ] [01-what-is-full-stack](lessons/01-what-is-full-stack.md)
+- [ ] [02-internet-and-http](lessons/02-internet-and-http.md)
+- [ ] [03-client-server-request-response](lessons/03-client-server-request-response.md)
+- [ ] [04-dev-environment](lessons/04-dev-environment.md)
+- [ ] [05-project-structure-and-git-first-steps](lessons/05-project-structure-and-git-first-steps.md)
 
-### Parts of a URL
-```
-https://api.example.com:443/tasks/42?status=done#top
- |         |             |    |       |           |
-protocol  host          port path   query       fragment
-```
+### Examples
 
-### Common HTTP methods
+- [ ] [01-hello-http-server](examples/01-hello-http-server/README.md)
+- [ ] [02-client-server-demo](examples/02-client-server-demo/README.md)
+- [ ] [03-inspect-raw-http](examples/03-inspect-raw-http/README.md)
+- [ ] [04-npm-basics](examples/04-npm-basics/README.md)
 
-| Method | Purpose | Example |
-|--------|---------|---------|
-| GET | Read data | Get all tasks |
-| POST | Create data | Add a task |
-| PUT / PATCH | Update data | Edit a task |
-| DELETE | Remove data | Delete a task |
+### Exercises
 
-### Common status codes
+- [ ] [01 Verify setup](exercises/01-verify-setup.md)
+- [ ] [02 Inspect Network tab](exercises/02-inspect-network.md)
+- [ ] [03 First server with /about](exercises/03-first-server.md)
+- [ ] [04 Add /health and show it on the demo page](exercises/04-health-route.md)
+- [ ] [05 Create project, add .gitignore, make 3 commits](exercises/05-git-project.md)
 
-| Code | Meaning |
-|------|---------|
-| 200 | OK |
-| 201 | Created |
-| 400 | Bad request (client error) |
-| 401 | Unauthorized (not logged in) |
-| 403 | Forbidden (logged in, not allowed) |
-| 404 | Not found |
-| 500 | Server error |
+### Quiz
 
----
+- [ ] [Module 1 quiz](quiz.md)
 
-## 3. Client-Server Architecture and the Request-Response Cycle (25 min)
+## Capstone checkpoint
 
-```
- ┌──────────┐   1. Request (GET /tasks)    ┌──────────┐      ┌──────────┐
- │  Client  │ ───────────────────────────► │  Server  │ ───► │ Database │
- │ (Browser)│ ◄─────────────────────────── │ (Node.js)│ ◄─── │          │
- └──────────┘   2. Response (JSON, 200)    └──────────┘      └──────────┘
-```
+End of Module 1 goals:
 
-**Steps when you open a page:**
-1. You type a URL. The browser asks DNS for the IP address.
-2. The browser opens a connection and sends an HTTP **request**.
-3. The server processes it (maybe reading the database).
-4. The server sends back an HTTP **response** (HTML, JSON, an image...).
-5. The browser renders the result.
+- Git has been initialised in a project folder
+- a simple hello server is running locally
+- the repository has at least one clean commit
+- you can explain the request-response cycle in plain English
+- you tagged the checkpoint as `module-1-end`
 
-**Live demo:** open DevTools (`F12`) → **Network** tab → reload any site. Click a request and show its method, status code, headers and response.
-
-### Anatomy of a request and response
-```
-GET /tasks HTTP/1.1                 HTTP/1.1 200 OK
-Host: localhost:3000                Content-Type: application/json
-Accept: application/json
-                                    [{"id":1,"title":"Learn Git"}]
-```
-
----
-
-## 4. Development Environment (30 min, hands-on)
-
-### VS Code
-- Open a folder with **File → Open Folder** (not single files)
-- Integrated terminal: `` Ctrl + ` ``
-- Install the recommended extensions from [00-setup](../00-setup/README.md)
-
-### Node.js and npm
-- **Node.js** lets JavaScript run outside the browser, on your machine or a server.
-- **npm** (Node Package Manager) installs and manages libraries.
-
-```bash
-node -v                 # check Node version
-npm -v                  # check npm version
-npm init -y             # create package.json
-npm install express     # install a package
-```
-
-Key files created by npm:
-- `package.json`: project info, scripts, list of dependencies
-- `package-lock.json`: exact versions installed (commit it)
-- `node_modules/`: downloaded packages (**never commit**, listed in `.gitignore`)
-
-Other package managers (yarn, pnpm) do the same job; we use npm.
-
-### Git basics (full coverage in Module 9)
 ```bash
 git init
 git add .
-git commit -m "Initial commit"
-git status
-git log --oneline
+git commit -m "Module 1 checkpoint"
+git tag module-1-end
 ```
 
-### Typical project structure
-```
-task-manager/
-├── client/            # frontend code
-├── server/            # backend code
-├── .gitignore
-├── package.json
-└── README.md
-```
+## Suggested pacing
 
----
+### 2-hour live session
 
-## 5. Hands-on Exercises (25 min)
-See [exercises/](exercises/):
-1. `01-verify-setup.md`: verify tools
-2. `02-inspect-network.md`: explore requests in DevTools
-3. `03-first-server.md`: run a tiny Node server and make a first Git commit
+- 0:00-0:20: Lesson 1 and 2
+- 0:20-0:45: Lesson 3 and Example 1
+- 0:45-1:05: Lesson 4 and Example 4
+- 1:05-1:30: Example 2 and DevTools walkthrough
+- 1:30-1:50: Exercise 3 and 4
+- 1:50-2:00: Quiz and recap
 
-## 6. Capstone Checkpoint
-- A `task-manager` folder with Git initialised
-- A working "Hello" Node server (see `examples/http-server/`)
-- Tag: `module-1-end`
+### Self-paced
 
-## 7. Common Mistakes
-- Installing Node but not restarting the terminal, so `node -v` fails
-- Opening a single file in VS Code instead of the whole folder
-- Committing `node_modules/` (always add it to `.gitignore`)
-- Confusing HTTP (protocol) with HTML (language)
-- Confusing `localhost` (your own machine) with a public website
+- Day 1: Lessons 1-3, Example 1, Exercise 1-3
+- Day 2: Lessons 4-5, Example 4, Exercise 4-5, quiz
+- Optional: review the raw HTTP example again and compare the output with the browser requests
 
-## 8. Quick Quiz
-1. What is the difference between frontend and backend?
-2. What does DNS do?
-3. What is the difference between HTTP and HTTPS?
-4. Which HTTP method would you use to create a new task?
-5. What does status code 404 mean? And 500?
-6. What is `package.json` for?
-7. Why should `node_modules` not be committed?
+## Next module
 
-_Answers are in [solutions/quiz-answers.md](solutions/quiz-answers.md)._
+Continue to [Module 2: HTML, CSS, and JavaScript](../module-02-html-css-js/README.md).
 
-## 9. Further Reading
-- MDN: [How the Web works](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/How_the_Web_works)
-- MDN: [An overview of HTTP](https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview)
-- Node.js docs: https://nodejs.org/en/learn
-- Pro Git (free book): https://git-scm.com/book
+## Instructor reminder
+
+This module gives students the model they need for the rest of the course. If a student only remembers three ideas, they should be:
+
+1. a browser sends a request and a server sends a response
+2. a full stack app has separate layers
+3. Git and a clear folder structure keep projects manageable
+
+Previous: [00-setup](../00-setup/README.md)  |  Next: [Module 2](../module-02-html-css-js/README.md)

@@ -43,7 +43,7 @@ git clone <repo-url>
 cd fullstack-course
 ```
 
-Start with [00-setup](00-setup/README.md), then open `module-01-intro/README.md`.
+Start with [00-setup](00-setup/), then open `module-01-intro/README.md`.
 
 ### Catching up with checkpoints
 
@@ -57,4 +57,7 @@ git checkout module-3-start      # jump to the start of Module 3
 - Module template: [resources/module-template.md](resources/module-template.md)
 - Capstone plan: [capstone-project/README.md](capstone-project/README.md)
 - Keep `solutions/` on the `solutions` branch if you do not want students to see them early.
-# fullstack-development-course
+
+## Module status
+
+- [01](module-01-intro/) — Updated for the new lesson-based structure, example walkthroughs, exercise set, and quiz.

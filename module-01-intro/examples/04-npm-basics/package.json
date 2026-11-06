@@ -1,0 +1,20 @@
+{
+  "name": "npm-basics",
+  "version": "1.0.0",
+  "description": "Basic npm demo for Module 1",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [
+    "fullstack",
+    "module-1"
+  ],
+  "author": "Course Author",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}

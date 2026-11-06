@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Client Server Demo</title>
+    <style>
+      body { font-family: sans-serif; margin: 24px; }
+      button { padding: 8px 12px; margin-top: 12px; }
+      ul { margin-top: 12px; }
+    </style>
+  </head>
+  <body>
+    <h1>Tasks</h1>
+    <button id="loadButton">Load tasks</button>
+    <ul id="taskList"></ul>
+
+    <script>
+      document.getElementById('loadButton').addEventListener('click', async () => {
+        try {
+          const response = await fetch('http://localhost:3001/tasks');
+          const tasks = await response.json();
+          const list = document.getElementById('taskList');
+          list.innerHTML = '';
+
+          tasks.forEach((task) => {
+            const item = document.createElement('li');
+            item.textContent = `${task.title} (${task.done ? 'done' : 'open'})`;
+            list.appendChild(item);
+          });
+        } catch (error) {
+          console.error('Fetch failed:', error);
+          document.getElementById('taskList').innerHTML = '<li>Could not load tasks.</li>';
+        }
+      });
+    </script>
+  </body>
+</html>
