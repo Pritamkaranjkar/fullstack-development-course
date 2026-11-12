@@ -1,0 +1,42 @@
+:root {
+  --bg: #f8fafc;
+  --panel: #ffffff;
+  --border: #dbeafe;
+  --text: #0f172a;
+  --muted: #475569;
+  --error: #b91c1c;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.page {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 24px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+
+.status {
+  color: var(--muted);
+  margin-bottom: 20px;
+}
+
+.status.error {
+  color: var(--error);
+}
+
+#task-list {
+  padding-left: 20px;
+  line-height: 1.8;
+}

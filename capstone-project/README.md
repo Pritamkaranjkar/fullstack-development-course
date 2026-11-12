@@ -24,5 +24,21 @@ A full stack app where users register, log in, and manage their own tasks.
 | 9 | Dockerfile and docker-compose |
 | 10 | Kubernetes basics, cloud deployment, demo |
 
+## Module 2 milestone
+
+The frontend checkpoint for Module 2 is a static Task Manager UI. Students should be able to:
+
+- render a task list with HTML and CSS
+- add a task from a form
+- mark a task complete or delete it
+- show counts for total, done, and open items
+- load mock data with `fetch()` and `async/await`
+- make the layout responsive for mobile screens
+
+Files:
+
+- [module-02-html-css-js/starter](../module-02-html-css-js/starter/)
+- [module-02-html-css-js/solutions/capstone-task-manager-ui](../module-02-html-css-js/solutions/capstone-task-manager-ui/)
+
 ## Checkpoint tags
 `module-N-start` and `module-N-end` for N = 1..10.

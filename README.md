@@ -61,3 +61,4 @@ git checkout module-3-start      # jump to the start of Module 3
 ## Module status
 
 - [01](module-01-intro/) — Updated for the new lesson-based structure, example walkthroughs, exercise set, and quiz.
+- [02](module-02-html-css-js/) — Added lessons, examples, exercises, quiz, starter, and completed Task Manager UI milestone.

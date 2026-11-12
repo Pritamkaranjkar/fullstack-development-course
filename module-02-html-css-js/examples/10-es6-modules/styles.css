@@ -1,0 +1,30 @@
+:root {
+  --bg: #f8fafc;
+  --panel: #ffffff;
+  --border: #dbeafe;
+  --text: #0f172a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.page {
+  max-width: 620px;
+  margin: 40px auto;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px;
+}
+
+#task-list {
+  line-height: 1.8;
+}

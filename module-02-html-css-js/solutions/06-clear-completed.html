@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clear Completed</title>
+    <style>
+      body { font-family: Arial, sans-serif; background: #f8fafc; }
+      .app { max-width: 500px; margin: 40px auto; background: white; border: 1px solid #dbeafe; border-radius: 12px; padding: 24px; }
+      ul { list-style: none; padding: 0; }
+      li { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+      .done { text-decoration: line-through; opacity: 0.7; }
+      button { border: none; border-radius: 8px; padding: 8px 12px; cursor: pointer; }
+      .clear { background: #fee2e2; color: #991b1b; }
+    </style>
+  </head>
+  <body>
+    <div class="app">
+      <h1>Tasks</h1>
+      <ul id="task-list">
+        <li><span class="done">Review notes</span><button type="button">Delete</button></li>
+        <li><span>Write CSS</span><button type="button">Delete</button></li>
+      </ul>
+      <button class="clear" type="button">Clear completed</button>
+    </div>
+
+    <script>
+      const taskList = document.querySelector('#task-list');
+      const clearBtn = document.querySelector('.clear');
+
+      clearBtn.addEventListener('click', () => {
+        taskList.querySelectorAll('li').forEach((item) => {
+          const text = item.querySelector('span');
+          if (text.classList.contains('done')) {
+            item.remove();
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

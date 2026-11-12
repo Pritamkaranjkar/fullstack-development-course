@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task Form and Table</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <section class="panel">
+        <h1>Add a task</h1>
+
+        <form>
+          <div class="field">
+            <label for="task-name">Task name</label>
+            <input id="task-name" name="task-name" type="text" required />
+          </div>
+
+          <div class="field">
+            <label for="due-date">Due date</label>
+            <input id="due-date" name="due-date" type="date" />
+          </div>
+
+          <div class="field">
+            <label for="priority">Priority</label>
+            <select id="priority" name="priority">
+              <option value="low">Low</option>
+              <option value="medium">Medium</option>
+              <option value="high">High</option>
+            </select>
+          </div>
+
+          <button type="submit">Add task</button>
+        </form>
+      </section>
+
+      <section class="panel">
+        <h2>Current tasks</h2>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Task</th>
+              <th>Due</th>
+              <th>Priority</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Review requirements</td>
+              <td>2026-11-07</td>
+              <td>High</td>
+            </tr>
+            <tr>
+              <td>Write CSS</td>
+              <td>2026-11-09</td>
+              <td>Medium</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+  </body>
+</html>

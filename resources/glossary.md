@@ -25,5 +25,26 @@
 | Request | A message sent from the client to the server |
 | Response | A message sent from the server back to the client |
 | Full stack | The combination of frontend, backend, database, and deployment concerns |
+| Semantic HTML | HTML that clearly describes the meaning of the content, such as `header`, `main`, and `article` |
+| DOM | The browser's structured representation of the HTML page, which JavaScript can read and change |
+| Selector | A CSS pattern that chooses which HTML elements receive a style |
+| Specificity | The rule that decides which CSS style wins when multiple selectors match the same element |
+| Box model | The four layers around an element: content, padding, border, and margin |
+| Flexbox | A CSS layout system for arranging items in one direction, usually a row or column |
+| Grid | A CSS layout system for arranging items in rows and columns at the same time |
+| Media query | A CSS condition that applies styles only when the browser width or device matches a rule |
+| Viewport | The visible area of the browser window on a device |
+| Promise | A JavaScript object that represents a value that will exist in the future, either successfully or with an error |
+| Async / await | JavaScript syntax for writing asynchronous code in a readable, sequential style |
+| JSON | JavaScript Object Notation, a lightweight format for storing and sending data |
+| Module | A JavaScript file that can export and import values with `import` and `export` |
+| Reverse proxy | A server that receives requests and forwards them to the correct backend service |
+| Form | An HTML element that collects user input |
+| Validation | Checks that user input matches a required rule before it is submitted |
+| Variable | A named value that code can read or change |
+| Function | A reusable block of code that performs a task |
+| Array | A list of values in JavaScript |
+| Object | A JavaScript value that stores related data and properties |
+| Event | A browser notification such as a click, submit, or keyboard press |
 
 _Add new terms as each module is taught._

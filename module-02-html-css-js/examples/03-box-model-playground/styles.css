@@ -1,0 +1,31 @@
+:root {
+  --bg: #eff6ff;
+  --card-bg: #ffffff;
+  --border: #60a5fa;
+  --text: #111827;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.playground {
+  max-width: 700px;
+  margin: 60px auto;
+  padding: 24px;
+}
+
+.demo-box {
+  background: var(--card-bg);
+  border: 4px solid var(--border);
+  padding: 24px;
+  margin: 32px 0;
+  box-shadow: 0 12px 24px rgba(37, 99, 235, 0.12);
+}

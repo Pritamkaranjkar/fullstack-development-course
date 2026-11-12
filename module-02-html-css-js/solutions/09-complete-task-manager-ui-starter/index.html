@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Dashboard</p>
+          <h1>Task Manager</h1>
+        </div>
+      </header>
+
+      <main class="layout">
+        <aside class="sidebar">
+          <h2>Menu</h2>
+          <nav aria-label="Sidebar navigation">
+            <a href="#">Inbox</a>
+            <a href="#">Today</a>
+            <a href="#">Completed</a>
+          </nav>
+        </aside>
+
+        <section class="content">
+          <form id="task-form" class="task-form">
+            <label for="task-input">New task</label>
+            <div class="task-form-row">
+              <input id="task-input" name="task" type="text" placeholder="Add a task" required />
+              <button type="submit" class="primary-btn">Save</button>
+            </div>
+          </form>
+
+          <div class="summary">
+            <div class="summary-card">
+              <span>Total</span>
+              <strong id="total-count">0</strong>
+            </div>
+            <div class="summary-card">
+              <span>Done</span>
+              <strong id="done-count">0</strong>
+            </div>
+            <div class="summary-card">
+              <span>Open</span>
+              <strong id="open-count">0</strong>
+            </div>
+          </div>
+
+          <section class="list-panel">
+            <div class="list-header">
+              <h2>Tasks</h2>
+              <button type="button" id="clear-completed" class="secondary-btn">Clear completed</button>
+            </div>
+
+            <ul id="task-list" aria-live="polite"></ul>
+          </section>
+        </section>
+      </main>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

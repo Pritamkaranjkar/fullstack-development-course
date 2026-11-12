@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Grid</title>
+    <style>
+      body { margin: 0; font-family: Arial, sans-serif; background: #f8fafc; color: #0f172a; }
+      .grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; max-width: 960px; margin: 40px auto; padding: 0 20px; }
+      .item { background: white; border: 1px solid #dbeafe; border-radius: 12px; padding: 20px; }
+      @media (max-width: 700px) { .grid { grid-template-columns: 1fr; } }
+    </style>
+  </head>
+  <body>
+    <div class="grid">
+      <div class="item"><h2>Plan</h2><p>Review tasks and priorities.</p></div>
+      <div class="item"><h2>Build</h2><p>Create the first version of the page.</p></div>
+      <div class="item"><h2>Ship</h2><p>Share the results with the team.</p></div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox Layout</title>
+    <style>
+      body { margin: 0; font-family: Arial, sans-serif; background: #f8fafc; color: #0f172a; }
+      nav { display: flex; justify-content: space-between; align-items: center; gap: 20px; background: white; border-bottom: 1px solid #dbeafe; padding: 16px 24px; }
+      .nav-links { display: flex; gap: 20px; }
+      .page { display: flex; justify-content: center; align-items: center; min-height: 70vh; }
+      .card { width: min(420px, 90vw); background: white; border: 1px solid #dbeafe; border-radius: 12px; padding: 24px; text-align: center; }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div><strong>Task Manager</strong></div>
+      <div class="nav-links">
+        <a href="#">Home</a>
+        <a href="#">Tasks</a>
+        <a href="#">Reports</a>
+      </div>
+    </nav>
+
+    <div class="page">
+      <div class="card">
+        <h1>Welcome back</h1>
+        <p>Your tasks are ready to review.</p>
+      </div>
+    </div>
+  </body>
+</html>
